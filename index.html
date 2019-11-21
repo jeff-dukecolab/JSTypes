@@ -1,0 +1,73 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.7.2/darkly/bulmaswatch.min.css">
+  <script src="script.js"></script>
+</head>
+<nav class="level">
+  <div class="level-item level-left">
+    <h1 class="title is-1">Data Types</h1>
+  </div>
+</nav>
+<p class="subtitle is-4"></p>
+<div class="container is-fluid">
+  <div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">What are they?</p>
+          <p class="subtitle">types of data!</p>
+          <div class="content">
+          <p>A data type specifies exactly what `type` of data a variable has. The types are:</p>
+            <ul>
+              <li>Number - 1,2,3</li>
+              <li>String - "I am a string"</li>
+              <li>Boolean - True or false</li>
+              <li>Undefined - unset or unknown data</li>
+              <li>NULL - a known variable that has no value</li>
+              <li>Array - ["up", "down", "left", "right"]</li>
+              <li>Object - {"key": "value", "another key": "another value"}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">How do I use them?</p>
+          <p class="subtitle">Any way you want!</p>
+          <script>
+            var valueTypes = {
+              nullValue: null,
+              arrayValue: ["1", "2", "3"],
+              stringValue: "2",
+              objectValue: {"key": "value"},
+              integerValue: 5,
+              boolValue: false,
+            }
+          </script>
+          
+          <button onClick="checkDataType(this.innerHTML)" class="button">Hello!</button>
+          
+          <button onClick="checkDataType(1)" class="button">integer</button>
+          
+          <button onClick="checkDataType(valueTypes.arrayValue)" class="button">["1", "2", "3"]</button>
+          
+                    <button onClick="checkDataType(valueTypes.quack)" class="button">undefined</button>
+          
+          <button onClick="checkDataType(valueTypes.objectValue)" class="button">{"key": "value"}</button>
+       
+          <button onClick="checkDataType(valueTypes.boolValue)" class="button">false</button>
+          <p></p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">The Type</p>
+        <p id="dataType"></p>
+      </div>
+    </article>
+  </div>
+</div>
+</div>
